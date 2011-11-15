@@ -1,5 +1,3 @@
-= BootstrapHelper
-
 # Rails 3.1
 Include BootstrapHelper in Gemfile:
 
