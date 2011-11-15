@@ -1,10 +1,12 @@
 = BootstrapHelper
+
 # Rails 3.1
-Include BootstrapHelper in Gemfile;
+Include BootstrapHelper in Gemfile:
 
 ``` ruby
-gem 'bootstrap-helper',git: 'git://github.com/niedhui/bootstrap-helpergit'
+gem 'bootstrap-helper',git: 'git://github.com/niedhui/bootstrap-helper.git'
 ```
+
 # topbar(Navigation)
 ``` ruby
 - topbar do |bar|
