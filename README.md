@@ -17,3 +17,13 @@ gem 'bootstrap-helper',git: 'git://github.com/niedhui/bootstrap-helper.git'
   = bar.second_nav do     
     = bar.item 'label4',               "/url4/url4"
 ```
+
+# modal
+``` ruby
+- modal id: "my_modal" do |m| 
+  = m.header "修改备注"
+  = m.body do
+    %textarea#remark_field{style:"width: 95%"}
+  = m.footer do
+    = primary_link_to "确定","#"
+```
