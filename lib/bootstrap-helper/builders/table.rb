@@ -18,7 +18,10 @@ module BootstrapHelper
       end
 
       def wrapper(options ,buffer)
-        content_tag :table,buffer,class: 'table'
+        table_class = ['table']
+        table_class << "table-striped" if options[:striped]
+        table_class << "table-bordered" if options[:border]
+        content_tag :table, buffer, class: table_class
       end
       
       def ths(*heads)
