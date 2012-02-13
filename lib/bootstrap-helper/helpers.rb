@@ -1,9 +1,9 @@
 module BootstrapHelper
   module Helpers
-    autoload :Topbar,     'bootstrap-helper/helpers/topbar'
+    autoload :Navbar,     'bootstrap-helper/helpers/navbar'
     autoload :Modal,     'bootstrap-helper/helpers/modal'
     autoload :Link,     'bootstrap-helper/helpers/link'
-    include Topbar
+    include Navbar
     include Modal
     include Link
   end
