@@ -1,11 +1,5 @@
-#  - bt_table do |table|
-#    = table.ths [:]
-#    = table.tds 
-#
-#
-#
-#
-
+# encoding: utf-8
+# TODO: better doc, tr_class
 module BootstrapHelper
   module Builders
     class Table
@@ -14,6 +8,7 @@ module BootstrapHelper
 
       def initialize(template,collection, options = {}, &proc)
         @template, @collection = template,  collection
+        @tr_class = options.delete(:tr_class)
         render(options, &proc)
       end
       
@@ -39,7 +34,7 @@ module BootstrapHelper
       end
       
       def render_tr(item,columns)
-        content_tag :tr do
+        content_tag :tr ,class: (@tr_class.call(item) if @tr_class) do
           reduce_collection(columns) {|column|  render_td(item, column)}
         end
       end
