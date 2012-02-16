@@ -27,3 +27,19 @@ gem 'bootstrap-helper',git: 'git://github.com/niedhui/bootstrap-helper.git'
   = m.footer do
     = primary_link_to "确定","#"
 ```
+
+# table
+```ruby
+  - bt_table users do |table|
+    = table.ths "email","name"
+    = table.tds :email, ->(user) { user.first_name+ user.last_name}
+```
+
+# buttons
+```ruby
+  - bt_button_group "Actions" do
+    %li= link_to "hello",   hello_path
+    %li= link_to "bye",     bye_path
+    %li.divider
+    %li= link_to "nihao"
+```
