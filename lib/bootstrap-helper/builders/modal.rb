@@ -20,7 +20,7 @@ module BootstrapHelper
 
       def header(title)
         template.content_tag(:div, class: "modal-header") do
-          (template.link_to "×","#",class: 'close') << template.content_tag(:h3,title)
+          (template.link_to "×","#",class: 'close', data: { dismiss: 'modal'} ) << template.content_tag(:h3,title)
         end
       end
       
